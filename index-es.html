@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delfina Marchese - Periodista Multimedia Bilingüe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-links a, .contact-links button {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        .contact-links a:hover, .contact-links button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+        }
+
+        /* Phone Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+
+        .phone-number {
+            font-size: 1.5em;
+            color: #0066cc;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 20px;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            background: white;
+            margin: 20px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #1a1a2e;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #0066cc;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .video-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Small video for social section */
+        .video-grid.small-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+
+        .video-info .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .video-info p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .video-info .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: #e3f2fd;
+            color: #0066cc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+
+        /* Data Viz Section */
+        .data-viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .data-viz-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .data-viz-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .data-viz-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #1a1a2e;
+        }
+
+        .data-viz-card p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .data-viz-card .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+
+        /* Written Work */
+        .written-work {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .article-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .article-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+
+        .article-card .publication {
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .article-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .article-link-btn {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 5px 10px 5px 0;
+            transition: background 0.3s ease;
+        }
+
+        .article-link-btn:hover {
+            background: #0052a3;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer .contact-links {
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            .contact-links {
+                justify-content: center;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            .video-grid,
+            .written-work {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Delfina Marchese</h1>
+                    <p>Periodista y Editora Multimedia Bilingüe | Español/Inglés</p>
+                    <p style="font-size: 1em; opacity: 0.8;">M.A. en Periodismo, Cobertura de Negocios y Economía</p>
+                    <div class="contact-links">
+                        <a href="mailto:delfimarchese@gmail.com">Email</a>
+                        <button id="phoneBtn">Teléfono</button>
+                        <a href="https://www.linkedin.com/in/delfina-marchese/?locale=es_ES" target="_blank">LinkedIn</a>
+                        <a href="DelfinaMarchese_Resume 2025.pdf" target="_blank">CV (PDF)</a>
+                        <a href="index.html" style="background: rgba(255,255,255,0.2); font-weight: 600;">🇺🇸 English</a>
+                    </div>
+                </div>
+                <img src="Marchese_Delfina.jpg" alt="Delfina Marchese" class="profile-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Phone Modal -->
+    <div id="phoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Contáctame</h3>
+            <div class="phone-number">+1 (646) 522-3532</div>
+            <p>¡No dudes en llamar o enviar mensaje!</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#broadcast">Trabajo Televisivo</a></li>
+            <li><a href="#corporate">Noticias Corporativas</a></li>
+            <li><a href="#data-viz">Visualización de Datos</a></li>
+            <li><a href="#social">Redes Sociales</a></li>
+            <li><a href="#written">Trabajo Escrito</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="about-content">
+                <p>Soy una periodista multimedia bilingüe especializada en cobertura de negocios y economía, producción de video y narrativa multiplataforma. Con cuatro años de experiencia en una de las empresas de medios más grandes de Argentina y formación en la Craig Newmark Graduate School of Journalism de CUNY, aporto sólido criterio periodístico, habilidades técnicas y capacidad para prosperar bajo presión de plazos ajustados.</p>
+                
+                <p>Mi experiencia abarca producción de noticias televisivas, periodismo corporativo, creación de contenido para redes sociales, visualización de datos y reportajes de largo formato. Tengo fluidez en español e inglés, con experiencia en Adobe Premiere Pro, CapCut, HTML/CSS/JavaScript y diversas plataformas digitales.</p>
+
+                <p><strong>Competencias Principales:</strong> Producción de noticias multiplataforma, edición de video, reportaje de campo, redacción en estilo AP, cobertura de noticias de última hora, narrativa bilingüe, gestión de plazos, toma de decisiones editoriales, visualización de datos, desarrollo web</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="broadcast">
+        <div class="container">
+            <h2>Paquetes de Noticias Televisivas</h2>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/MK_2yZCMyMI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Basura en NYC</h3>
+                        <p class="meta">Productora, Editora | Craig Newmark J-School</p>
+                        <p>Produje, grabé y edité el video utilizando gráficos para ayudar a explicar el contenido. Reportera: Cindy Marchionda.</p> 
+                        <div class="skills">
+                            <span class="skill-tag">Reportaje de Campo</span>
+                            <span class="skill-tag">Adobe Premiere Pro</span>
+                            <span class="skill-tag">Productora</span>
+                            <span class="skill-tag">Editora</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/vkHf-6BzXT0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Propuesta Calle 34</h3>
+                        <p class="meta">Productora, Editora | Craig Newmark J-School</p>
+                        <p>Investigué los cambios de tráfico propuestos en Manhattan. Produje y edité video bajo plazo ajustado, incorporando entrevistas con partes interesadas y análisis de planificación urbana.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Periodismo de Datos</span>
+                            <span class="skill-tag">Productora</span>
+                            <span class="skill-tag">Edición de Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/A0ocUmmCWUg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Exhibición de Portadas de The New Yorker</h3>
+                        <p class="meta">Reportera, Productora, Editora | Craig Newmark J-School</p>
+                        <p>Escribí el guion y reporté sobre una exhibición cultural, combinando crítica de arte con narrativa de interés humano.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Artes y Cultura</span>
+                            <span class="skill-tag">Redacción de Guiones</span>
+                            <span class="skill-tag">Coordinación de Entrevistas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="corporate">
+        <div class="container">
+            <h2>Noticias Corporativas y Cobertura de Eventos</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #666;">Durante cuatro años en Telecom S.A., una de las empresas de medios más grandes de Argentina, produje reportajes de campo desde eventos en vivo importantes, explicando operaciones técnicas complejas a audiencias internas bajo presión extrema de plazos.</p>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" poster="">
+                            <source src="Lollapalooza2023.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Detrás del Streaming: Lollapalooza</h3>
+                        <p class="meta">Reportera, Productora, Editora | Telecom S.A. Comunicaciones Internas</p>
+                        <p>Reporté en campo desde Lollapalooza para explicar las operaciones técnicas y logísticas detrás del streaming de un festival de música importante. Entrevisté a equipos técnicos, personal de operaciones y ejecutivos para desglosar los meses de preparación necesarios para el streaming exitoso en vivo.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Reportaje de Campo</span>
+                            <span class="skill-tag">Cobertura de Eventos en Vivo</span>
+                            <span class="skill-tag">Adobe Premiere Pro</span>
+                            <span class="skill-tag">Coordinación de Entrevistas</span>
+                            <span class="skill-tag">Gestión de Plazos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/xsBZyB__U24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Concierto en Estadio River Plate</h3>
+                        <p class="meta">Reportera, Productora, Editora | Telecom S.A. Comunicaciones Internas</p>
+                        <p>Cubrí operaciones técnicas y coordinación de equipos, traduciendo tecnología compleja de streaming en narrativa accesible para audiencias corporativas.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Periodismo Corporativo</span>
+                            <span class="skill-tag">Reportaje Técnico</span>
+                            <span class="skill-tag">Producción de Video</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" poster="">
+                            <source src="Primaverasound.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Paquete de Cobertura de Festival</h3>
+                        <p class="meta">Reportera, Productora, Editora | Telecom S.A. Comunicaciones Internas</p>
+                        <p>Documenté operaciones de la empresa en un festival de música importante, coordinando con múltiples departamentos para entregar cobertura integral bajo plazos ajustados.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Coordinación Multi-Equipo</span>
+                            <span class="skill-tag">Criterio Periodístico</span>
+                            <span class="skill-tag">Distribución de Plataformas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-viz">
+        <div class="container">
+            <h2>Visualización de Datos y Desarrollo Web</h2>
+            
+            <div class="data-viz-grid">
+                <div class="data-viz-card">
+                    <h3>Historia de Vivienda Asequible en NYC</h3>
+                    <p>Creé HTML, CSS y diseño responsivo para una historia en profundidad sobre accesibilidad a vivienda asequible en la Ciudad de Nueva York, con elementos interactivos y narrativas basadas en datos.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Diseño Responsivo</span>
+                        <span class="tech-tag">Periodismo de Datos</span>
+                    </div>
+                </div>
+
+                <div class="data-viz-card">
+                    <h3>Proyecto de Tarjetas Interactivas</h3>
+                    <p>Construí un proyecto de tarjetas dinámicas usando JavaScript para narrativa interactiva, permitiendo a los usuarios explorar contenido a través de elementos clicables y atractivos.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Diseño Interactivo</span>
+                        <span class="tech-tag">Contenido Dinámico</span>
+                    </div>
+                </div>
+
+                <div class="data-viz-card">
+                    <h3>Mapa de Datos de Casos de Violación en NYC</h3>
+                    <p>Creé y produje un mapa basado en datos que visualiza el aumento de casos de violación en NYC en 2024, combinando análisis de datos con narrativa visual impactante para destacar tendencias de seguridad pública.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Visualización de Datos</span>
+                        <span class="tech-tag">Mapeo</span>
+                        <span class="tech-tag">Reportaje de Seguridad Pública</span>
+                    </div>
+                </div>
+
+                <div class="data-viz-card">
+                    <h3>Restaurantes Sin Gluten en NYC</h3>
+                    <p>Desarrollé un sitio web interactivo que mapea todos los restaurantes sin gluten en NYC, proporcionando un recurso fácil de usar para neoyorquinos conscientes de su dieta con datos buscables y filtrables.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Mapeo Interactivo</span>
+                        <span class="tech-tag">Desarrollo Web</span>
+                        <span class="tech-tag">Experiencia de Usuario</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social">
+        <div class="container">
+            <h2>Redes Sociales y Proyectos Independientes</h2>
+            
+            <div class="video-grid small-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/R0IDRrH4GMc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Perfil de Artista de Jazz Gitano</h3>
+                        <p class="meta">Reportera, Productora, Videógrafa, Editora | Proyecto Independiente</p>
+                        <p>Realicé entrevista de campo con músico de jazz gitano, explorando las raíces culturales del género. Parte de cuenta independiente de periodismo musical en Instagram (2,300+ seguidores).</p>
+                        <div class="skills">
+                            <span class="skill-tag">Entrevistas de Campo</span>
+                            <span class="skill-tag">Edición de Video Social</span>
+                            <span class="skill-tag">Engagement de Audiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="written">
+        <div class="container">
+            <h2>Trabajo Escrito</h2>
+            
+            <div class="written-work">
+                <div class="article-card">
+                    <div class="publication">Billboard</div>
+                    <h3>Soda Stereo: El Legado del Rock en América Latina</h3>
+                    <p>Historia destacada que explora el impacto cultural y el legado perdurable de la icónica banda de rock Soda Stereo en América Latina. Combina entrevistas originales con investigación de archivo para rastrear la influencia de la banda en múltiples generaciones.</p>
+                    <a href="https://www.billboard.com/music/latin/soda-stereo-interview-30-years-sueno-stereo-album-1236002938/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                </div>
+
+                <div class="article-card">
+                    <div class="publication">The Sick Times</div>
+                    <h3>Cierre de Clínica de Covid Prolongado en UNC</h3>
+                    <p>Investigué las implicaciones más amplias para el acceso a atención de Covid Prolongado y política de salud pública en Carolina del Norte tras el cierre de la clínica de Covid Prolongado de UNC.</p>
+                    <a href="https://thesicktimes.org/2025/06/24/unc-shuts-down-long-covid-clinic-leaving-thousands-without-specialized-care/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                </div>
+
+                <div class="article-card">
+                    <div class="publication">The Sick Times</div>
+                    <h3>Atención de Covid Prolongado en Argentina</h3>
+                    <p>Reporté sobre cómo los argentinos que sufren de Covid Prolongado navegan la búsqueda de tratamiento en un país donde casi no hay clínicas que traten la enfermedad.</p>
+                    <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                </div>
+
+                <div class="article-card">
+                    <div class="publication">Craig Newmark J-School</div>
+                    <h3>Reportaje de Negocios y Economía</h3>
+                    <p>El portafolio incluye cobertura de tendencias de gasto del consumidor estadounidense, impactos de aranceles en las industrias del vino y apicultura, y análisis de acciones del sector de belleza.</p>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/05/16/already-in-crisis-beekeepers-face-new-challenge-from-tariffs/" target="_blank" class="article-link-btn">Aranceles y Apicultura →</a>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/03/31/consumer-sentiment-keeps-declining-as-inflation-stays-high/" target="_blank" class="article-link-btn">Gasto del Consumidor →</a>
+                    <a href="https://coveringcompanies.journalism.cuny.edu/?s=elf+beauty" target="_blank" class="article-link-btn">Tendencias de Mercado →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Delfina Marchese. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Periodista Multimedia Bilingüe | Español/Inglés</p>
+            <div class="contact-links" style="margin-top: 20px;">
+                <a href="mailto:delfimarchese@gmail.com">Email</a>
+                <button id="phoneBtn2">Teléfono</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Phone modal functionality
+        const modal = document.getElementById('phoneModal');
+        const phoneBtn = document.getElementById('phoneBtn');
+        const phoneBtn2 = document.getElementById('phoneBtn2');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        phoneBtn.onclick = openModal;
+        phoneBtn2.onclick = openModal;
+        closeBtn.onclick = closeModal;
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

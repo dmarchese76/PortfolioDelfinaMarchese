@@ -326,6 +326,18 @@
             gap: 25px;
             margin-top: 40px;
         }
+        .project-preview {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
         .data-viz-card {
             background: white;
@@ -369,7 +381,7 @@
         /* Written Work */
         .written-work {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmin(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
@@ -484,7 +496,7 @@
                         <a href="mailto:delfimarchese@gmail.com">Email</a>
                         <button id="phoneBtn">Phone</button>
                         <a href="https://www.linkedin.com/in/delfina-marchese/?locale=en_US" target="_blank">LinkedIn</a>
-                        <a href="DelfinaMarchese_Resume 2025.pdf" target="_blank">Resume (PDF)</a>
+                        <a href="DelfinaMarchese_Resume_2025.pdf" target="_blank">Resume (PDF)</a>
                         <a href="index-es.html" style="background: rgba(255,255,255,0.2); font-weight: 600;">🇪🇸 Español</a>
                     </div>
                 </div>
@@ -508,20 +520,37 @@
             <li><a href="#data-viz">Data Visualization</a></li>
             <li><a href="#written">Written Work</a></li>
             <li><a href="#broadcast">Broadcast Work</a></li>
-            <li><a href="#corporate">Corporate News</a></li>
-            <li><a href="#social">Social Media</a></li>
+            <li><a href="#corporate">Corporate News</a></li>          
             <li><a href="#about">About</a></li>
         </ul>
     </nav>
     <section id="data-viz">
         <div class="container">
             <h2>Data Visualization & Web Development</h2>
-        
+            <div class="data-viz-grid">
+                <div class="data-viz-card">
+                    <div class="project-preview">
+                    <img src="LCMAP.gif"
+                    alt="Animated preview of Long COVID clinics interactive map">
+                    </div>
+                    <h3>Where Have All the Long COVID Clinics Gone?</h3>
+                    <p>Developed an interactive data visualization mapping the decline of Long COVID clinics in the U.S. since 2022</p>
+                    <a href="https://dmarchese76.github.io/LongCOVIDproject2/" target="_blank" class="article-link-btn">Long COVID Clinics Map</a>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">Public Health Reporting</span>
+                    </div>
+                </div>
 
                 <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="NYCMAP.gif"
+                        alt=" Map of NYC Crimes">
+                        </div>
                     <h3>NYC Rape Cases Data Map</h3>
                     <p>Created and produced a data-driven map visualizing the increase in NYC rape cases in 2024, combining data analysis with impactful visual storytelling to highlight public safety trends.</p>
-                    <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn">NYC Criminal Cases 2024 →</a>
+                    <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn">NYC Criminal Cases 2024</a>
                     <div class="tech-tags">
                         <span class="tech-tag">Data Visualization</span>
                         <span class="tech-tag">Mapping</span>
@@ -530,14 +559,19 @@
                 </div>
 
                 <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="Glutenfreemap.gif"
+                        alt=" Gluten-Free Restaurants in NYC Map">
+                        </div>
                     <h3>Gluten-Free Restaurants NYC</h3>
                     <p>Developed an interactive website mapping all gluten-free restaurants in NYC, providing a user-friendly resource for dietary-conscious New Yorkers with searchable, filterable data.</p>
-                    <a href="https://dmarchese76.github.io/glutenfreeMap-main/" target="_blank" class="article-link-btn">Gluten Free Map →</a>
+                    <a href="https://dmarchese76.github.io/glutenfreeMap-main/" target="_blank" class="article-link-btn">Gluten Free Map</a>
                     <div class="tech-tags">
                         <span class="tech-tag">Interactive Mapping</span>
                         <span class="tech-tag">Web Development</span>
                         <span class="tech-tag">User Experience</span>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -549,32 +583,105 @@
             
             <div class="written-work">
                 <div class="article-card">
-                    <div class="publication">Craig Newmark J-School</div>
+                    <div class="project-preview">
+                        <img src="Beekeeping.png"
+                        alt=" Beekeeping Article Preview">
+                    <div class="publication">NYCity News Service</div>
                     <h3>Business & Economics Reporting</h3>
-                    <p>Portfolio includes coverage of US consumer spending trends, tariff impacts on wine and beekeeping industries, and beauty sector stock analysis.</p>
-                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/05/16/already-in-crisis-beekeepers-face-new-challenge-from-tariffs/" target="_blank" class="article-link-btn">Tariffs & Beekeeping →</a>
-                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/03/31/consumer-sentiment-keeps-declining-as-inflation-stays-high/" target="_blank" class="article-link-btn">Consumer Spending →</a>
-                    <a href="https://coveringcompanies.journalism.cuny.edu/?s=elf+beauty" target="_blank" class="article-link-btn">Market Trends →</a>
+                    <h4>Already in Crisis, Beekeepers Face New Challenge From Tariffs</h4>
+                    <p>Explored how tariffs on imported  honey are exacerbating challenges for U.S. beekeepers already struggling with environmental and economic pressures.</p>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/05/16/already-in-crisis-beekeepers-face-new-challenge-from-tariffs/" target="_blank" class="article-link-btn">Tariffs & Beekeeping</a>
+                    </div>
                 </div>
                 <div class="article-card">
-                    <div class="publication">Billboard</div>
-                    <h3>Soda Stereo: Latin America's Rock Legacy</h3>
-                    <p>Feature story exploring the cultural impact and enduring legacy of iconic rock band Soda Stereo across Latin America. Blends original interviews with archival research to trace the band's influence on multiple generations.</p>
-                    <a href="https://www.billboard.com/music/latin/soda-stereo-interview-30-years-sueno-stereo-album-1236002938/" target="_blank" class="article-link-btn">Read Article →</a>
+                    <div class="project-preview">
+                        <img src="Wine.png"
+                        alt=" Wine Industry Article Preview">
+                        <div class="publication">NYCity News Service</div>
+                        <h3>Business & Economics Reporting</h3>
+                        <h4>‘Make America Grape Again’: Tariffs’ Impact  on the Wine Industry</h4>
+                        <p>Analyzed how tariffs on imported wines are affecting U.S. wineries, consumers, and the broader wine market, highlighting challenges within the industry.</p>
+                        <a href="https://bizeconreporting.journalism.cuny.edu/2025/04/01/make-america-grape-again-tariffs-impact-on-the-wine-industry/" target="_blank" class="article-link-btn">Tariffs & Wine Industry</a>
+                    </div>    
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="ConsumerSentiment.png"
+                        alt=" Consumer Spending Article Preview">  
+                        <div class="publication">NYCity News Service</div>
+                        <h3>Business & Economics Reporting</h3>
+                        <h4>Consumer sentiment keeps declining as inflation stays high</h4>
+                        <p>Reported on the consumer spending report by the Commerce Department’s Bureau of Economic Analysis </p>
+                        <a href="https://bizeconreporting.journalism.cuny.edu/2025/03/31/consumer-sentiment-keeps-declining-as-inflation-stays-high/" target="_blank" class="article-link-btn">Consumer Spending</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="elfbeauty.png"
+                        alt=" Beauty Stocks Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Business & Economics Reporting</h3>
+                    <h4>Beauty sector’s bad days may be over</h4>
+                    <p>Followed and analyzed beauty stocks for a Market Trend story.</p>
+                    <a href="https://coveringcompanies.journalism.cuny.edu/2025/09/23/beauty-sectors-bad-days-may-be-over/" target="_blank" class="article-link-btn">Market Trends</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="BestBuy.png"
+                        alt=" Best Buy Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Business & Economics Reporting</h3>
+                    <h4>Best Buy Invests In Online Business In Attempt to Compete with Amazon</h4>
+                    <p>Reported on Best Buy's strategic investment in its online business to better compete with Amazon, analyzing the potential impacts on the retail landscape.Creating data visualizations for business reporting on retail e-commerce trends.Designed comparative charts analyzing market share distribution.</p>
+                    <a href="https://coveringcompanies.journalism.cuny.edu/2025/11/24/best-buy-invests-in-online-business-in-attempt-to-compete-with-amazon/" target="_blank" class="article-link-btn">Corporate Strategy</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="SodaStereo.png"
+                        alt=" Soda Stereo Article Preview">
+                        <div class="publication">Billboard</div>
+                        <h3>Arts & Culture Reporting</h3>
+                        <h4>Soda Stereo’s Swan Song: Reflecting on 30 Years of ‘Sueño Stereo,’ the Album That Became the Band’s ‘Final Masterpiece’ </h4>
+                        <p>Feature story exploring the cultural impact and enduring legacy of iconic rock band Soda Stereo across Latin America. Blends original interviews with archival research to trace the band's influence on multiple generations.</p>
+                        <a href="https://www.billboard.com/music/latin/soda-stereo-interview-30-years-sueno-stereo-album-1236002938/" target="_blank" class="article-link-btn">Read Article</a>
+                    </div>
                 </div>
 
                 <div class="article-card">
-                    <div class="publication">The Sick Times</div>
-                    <h3>UNC Long Covid Clinic Closure</h3>
-                    <p>Investigated the broader implications for Long Covid care access and public health policy in North Carolina following the closure of the UNC Long Covid clinic.</p>
-                    <a href="https://thesicktimes.org/2025/06/24/unc-shuts-down-long-covid-clinic-leaving-thousands-without-specialized-care/" target="_blank" class="article-link-btn">Read Article →</a>
+                    <div class="project-preview">
+                        <img src="UNCClosing.png"
+                        alt=" UNC Long Covid Clinic Article Preview">
+                        <div class="publication">The Sick Times</div>
+                        <h3>Health Reporting</h3>
+                        <h4>UNC shuts down Long COVID clinic, leaving thousands without specialized care</h4>
+                        <p>Investigated the broader implications for Long Covid care access and public health policy in North Carolina following the closure of the UNC Long Covid clinic.</p>
+                        <a href="https://thesicktimes.org/2025/06/24/unc-shuts-down-long-covid-clinic-leaving-thousands-without-specialized-care/" target="_blank" class="article-link-btn">Read Article</a>
+                    </div>
                 </div>
 
                 <div class="article-card">
+                    <div class="project-preview">
+                        <img src="LCARGENTINA.png"
+                        alt=" Long Covid in Argentina Article Preview">
                     <div class="publication">The Sick Times</div>
-                    <h3>Long Covid Care in Argentina</h3>
+                    <h3>Health Reporting</h3>
+                    <h4>The crisis is “exasperating”: Long COVID compounds economic hardship in Argentina</h4>
                     <p>Reported on how Argentines suffering from Long Covid navigate finding treatment in a country where there are almost no clinics treating the disease.</p>
-                    <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Read Article →</a>
+                    <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Read Article</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="LCColombia.png"
+                        alt=" Long Covid in Colombia Article Preview">
+                        <div class="publication">The Sick Times</div>
+                        <h3>Health Reporting</h3>
+                        <h4>Despite Long COVID’s ongoing impact, research in Colombia is limited</h4>
+                        <p>Reported on the scarcity of medical treatment and information available for patients.</p>
+                        <a href="https://thesicktimes.org/2025/12/16/despite-long-covids-ongoing-impact-research-in-colombia-is-limited/" target="_blank" class="article-link-btn">Read Article</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -702,29 +809,6 @@
         </div>
     </section>
     
-    <section id="social">
-        <div class="container">
-            <h2>Social Media & Independent Projects</h2>
-            
-            <div class="video-grid small-grid">
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/R0IDRrH4GMc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>Gypsy Jazz Artist Profile</h3>
-                        <p class="meta">Reporter, Producer, Editor | Independent Project</p>
-                        <p>Conducted field interview with gypsy jazz musician, exploring the genre's cultural roots. Part of independent music journalism Instagram account (2,300+ followers).</p>
-                        <div class="skills">
-                            <span class="skill-tag">Field Interviewing</span>
-                            <span class="skill-tag">Social Video Editing</span>
-                            <span class="skill-tag">Audience Engagement</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
    
     <section id="about">
         <div class="container">
@@ -732,7 +816,7 @@
             <div class="about-content">
                 <p>I'm a bilingual multimedia business and economic journalist . Whether I'm building data visualizations, reporting on the economy or producing or editing news packages under deadline, I focus on translating complex topics into clear and accessible information.
                  <p> I'm fluent in Spanish and English, and I bring strong skills in video editing (Adobe Premiere Pro, CapCut), web development (HTML/CSS/JavaScript), and data visualization (Datawrapper, Flourish). I thrive under pressure, collaborate well with teams, and am always looking for the story that matters.</p>
-                <p><strong>Core Competencies:</strong> Multi-platform news production, video editing, field reporting, AP Style writing, breaking news coverage, bilingual storytelling, deadline management, data visualization, web development</p>
+                <p><strong>Core Competencies:</strong> Data Visualizations | Web Development | Multi-platform news production | Video editing |  AP Style writing | Breaking news coverage | Bilingual Storytelling | Deadline management </p>
             </div>
         </div>
     </section>

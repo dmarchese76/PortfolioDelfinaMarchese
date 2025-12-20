@@ -326,6 +326,18 @@
             gap: 25px;
             margin-top: 40px;
         }
+        .project-preview {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
         .data-viz-card {
             background: white;
@@ -484,7 +496,7 @@
                         <a href="mailto:delfimarchese@gmail.com">Email</a>
                         <button id="phoneBtn">Teléfono</button>
                         <a href="https://www.linkedin.com/in/delfina-marchese/?locale=es_ES" target="_blank">LinkedIn</a>
-                        <a href="DelfinaMarchese_Resume 2025.pdf" target="_blank">CV (PDF)</a>
+                        <a href="DelfinaMarchese_Resume_2025.pdf" target="_blank">CV (PDF)</a>
                         <a href="index.html" style="background: rgba(255,255,255,0.2); font-weight: 600;">🇺🇸 English</a>
                     </div>
                 </div>
@@ -509,7 +521,6 @@
             <li><a href="#written">Periodismo Gráfico</a></li>
             <li><a href="#broadcast">Trabajo Televisivo</a></li>
             <li><a href="#corporate">Comunicaciones Internas</a></li>
-            <li><a href="#social">Redes Sociales</a></li>
             <li><a href="#about">Sobre Mí</a></li>
             
         </ul>
@@ -517,19 +528,43 @@
     <section id="data-viz">
         <div class="container">
             <h2>Visualizaciones de Datos y Desarrollo Web</h2>
-
+            <div class="data-viz-grid">
+                
+                <!-- Card 1 - CORRECT -->
                 <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="LCMAP.gif" alt="Animated preview of Long COVID clinics interactive map">
+                    </div>
+                    <h3>Where Have All the Long COVID Clinics Gone?</h3>
+                    <p>Desarrollé un mapa interactivo para comparar la decadencia de la ayuda médica para los pacientes que sufren de Long COVID. Comparando la cantidad de hospitales disponibles en 2022 con 2025. </p>
+                    <a href="https://dmarchese76.github.io/LongCOVIDproject2/" target="_blank" class="article-link-btn">Long COVID Clinics Map</a>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">Public Health Reporting</span>
+                    </div>
+                </div>
+    
+                <!-- Card 2 - FIXED -->
+                <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="NYCMAP.gif" alt="Map of NYC Crimes">
+                    </div>
                     <h3>Mapa de Datos de Casos de Violación en NYC</h3>
                     <p>Creé y produje un mapa basado en datos que visualiza el aumento de casos de violación en NYC en 2024, combinando análisis de datos con narrativa visual impactante para destacar tendencias de seguridad pública.</p>
+                    <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn">NYC 2024 →</a>
                     <div class="tech-tags">
-                        <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn"> NYC 2024 →</a>
                         <span class="tech-tag">Visualización de Datos</span>
                         <span class="tech-tag">Mapeo</span>
                         <span class="tech-tag">Reportaje de Seguridad Pública</span>
                     </div>
                 </div>
-
+    
+                <!-- Card 3 - FIXED -->
                 <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="Glutenfreemap.gif" alt="Gluten-Free Restaurants in NYC Map">
+                    </div>
                     <h3>Restaurantes Sin Gluten en NYC</h3>
                     <p>Desarrollé un sitio web interactivo que mapea todos los restaurantes sin gluten en NYC, proporcionando un recurso fácil de usar para neoyorquinos conscientes de su dieta con datos buscables y filtrables.</p>
                     <a href="https://dmarchese76.github.io/glutenfreeMap-main/" target="_blank" class="article-link-btn">Gluten Free Map →</a>
@@ -539,6 +574,7 @@
                         <span class="tech-tag">Experiencia de Usuario</span>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -549,32 +585,102 @@
             
             <div class="written-work">
                 <div class="article-card">
-                    <div class="publication">Craig Newmark J-School</div>
-                    <h3>Reportaje de Negocios y Economía</h3>
-                    <p>El portafolio incluye cobertura de tendencias de gasto del consumidor estadounidense, impactos de aranceles en las industrias del vino y apicultura, y análisis de acciones del sector de belleza.</p>
-                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/05/16/already-in-crisis-beekeepers-face-new-challenge-from-tariffs/" target="_blank" class="article-link-btn">Aranceles y Apicultura →</a>
-                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/03/31/consumer-sentiment-keeps-declining-as-inflation-stays-high/" target="_blank" class="article-link-btn">Gasto del Consumidor →</a>
-                    <a href="https://coveringcompanies.journalism.cuny.edu/?s=elf+beauty" target="_blank" class="article-link-btn">Tendencias de Mercado →</a>
+                    <div class="project-preview">
+                        <img src="Beekeeping.png"
+                        alt=" Beekeeping Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Periodismo de Economía y Negocios</h3>
+                    <h4>Already in Crisis, Beekeepers Face New Challenge From Tariffs</h4>
+                    <p>El impacto de las tarifas en la industria apicultora.</p>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/05/16/already-in-crisis-beekeepers-face-new-challenge-from-tariffs/" target="_blank" class="article-link-btn">Tariffs & Beekeeping</a>
+                    </div>
                 </div>
                 <div class="article-card">
+                    <div class="project-preview">
+                        <img src="Wine.png"
+                        alt=" Wine Industry Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Periodismo de Economía y Negocios</h3>
+                    <h4>‘Make America Grape Again’: Tariffs’ Impact  on the Wine Industry</h4>
+                    <p>En esta historia analizo la industria vinícola como se vería afectada por los aranceles.</p>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/04/01/make-america-grape-again-tariffs-impact-on-the-wine-industry/" target="_blank" class="article-link-btn">Tariffs & Wine Industry</a>
+                    </div>
+                        
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="ConsumerSentiment.png"
+                        alt=" Consumer Spending Article Preview"> 
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Periodismo de Economía y Negocios</h3>
+                    <h4>Consumer sentiment keeps declining as inflation stays high</h4>
+                    <p>Luego del reporte del Commerce Department’s Bureau of Economic Analysis analice y reporte sobre el sentimiento del consumidor</p>
+                    <a href="https://bizeconreporting.journalism.cuny.edu/2025/03/31/consumer-sentiment-keeps-declining-as-inflation-stays-high/" target="_blank" class="article-link-btn">Consumer Spending</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="elfbeauty.png"
+                        alt=" Beauty Stocks Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Periodismo de Economía y Negocios</h3>
+                    <h4>Beauty sector’s bad days may be over</h4>
+                    <p> Seguimiento de acciones de inversion en la industria del maquillaje </p>
+                    <a href="https://coveringcompanies.journalism.cuny.edu/2025/09/23/beauty-sectors-bad-days-may-be-over/" target="_blank" class="article-link-btn">Market Trends</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="BestBuy.png"
+                        alt=" Best Buy Article Preview">
+                    <div class="publication">NYCity News Service</div>
+                    <h3>Periodismo de Economía y Negocios</h3>
+                    <h4>Best Buy Invests In Online Business In Attempt to Compete with Amazon</h4>
+                    <p>Una historia sobre la estrategia de la compañia para poder competir con Amazon analizando las posibles consecuencias.</p>
+                    <a href="https://coveringcompanies.journalism.cuny.edu/2025/11/24/best-buy-invests-in-online-business-in-attempt-to-compete-with-amazon/" target="_blank" class="article-link-btn">Corporate Strategy</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="SodaStereo.png"
+                        alt=" Soda Stereo Article Preview">
                     <div class="publication">Billboard</div>
                     <h3>El canto del cisne de Soda Stereo: 30 años de ‘Sueño Stereo’, el álbum que reunió a la banda</h3>
                     <p>Historia destacada que explora el impacto cultural y el legado perdurable de la icónica banda de rock Soda Stereo en América Latina. Combina entrevistas originales con investigación de archivo para rastrear la influencia de la banda en múltiples generaciones.</p>
-                    <a href="https://www.billboard.com/music/latin/soda-stereo-interview-30-years-sueno-stereo-album-1236002938/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                    <a href="https://www.billboard.com/music/latin/soda-stereo-interview-30-years-sueno-stereo-album-1236002938/" target="_blank" class="article-link-btn">Leer Artículo </a>
+                    </div>
                 </div>
 
                 <div class="article-card">
-                    <div class="publication">The Sick Times</div>
-                    <h3>Cierre de Clínica de Covid Prolongado en UNC</h3>
-                    <p>Investigué las implicaciones más amplias para el acceso a atención de Covid Prolongado y política de salud pública en Carolina del Norte tras el cierre de la clínica de Covid Prolongado de UNC.</p>
-                    <a href="https://thesicktimes.org/2025/06/24/unc-shuts-down-long-covid-clinic-leaving-thousands-without-specialized-care/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                    <div class="project-preview">
+                        <img src="UNCClosing.png"
+                        alt=" UNC Long Covid Clinic Article Preview">
+                        <div class="publication">The Sick Times</div>
+                        <h3>Cierre de Clínica de Covid Prolongado en UNC</h3>
+                        <p>Investigué las implicaciones más amplias para el acceso a atención de Covid Prolongado y política de salud pública en Carolina del Norte tras el cierre de la clínica de Covid Prolongado de UNC.</p>
+                        <a href="https://thesicktimes.org/2025/06/24/unc-shuts-down-long-covid-clinic-leaving-thousands-without-specialized-care/" target="_blank" class="article-link-btn">Leer Artículo</a>
+                    </div>
                 </div>
 
                 <div class="article-card">
-                    <div class="publication">The Sick Times</div>
-                    <h3>Atención de Covid Prolongado en Argentina</h3>
-                    <p>Reporté sobre cómo los argentinos que sufren de Covid Prolongado navegan la búsqueda de tratamiento en un país donde casi no hay clínicas que traten la enfermedad.</p>
-                    <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                    <div class="project-preview">
+                        <img src="LCARGENTINA.png"
+                        alt=" Long Covid in Argentina Article Preview">
+                        <div class="publication">The Sick Times</div>
+                        <h3>Atención de Covid Prolongado en Argentina</h3>
+                        <p>Reporté sobre cómo los argentinos que sufren de Covid Prolongado navegan la búsqueda de tratamiento en un país donde casi no hay clínicas que traten la enfermedad.</p>
+                        <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="project-preview">
+                        <img src="LCColombia.png"
+                        alt=" Long Covid in Colombia Article Preview">
+                        <div class="publication">The Sick Times</div>
+                        <h3>A Pesar del Impacto de Long COVID en Colombia, las investigaciones siguen siendo limitadas. </h3>
+                        <p>Reporte sobre la escasez de estudios y el tratamiento de los medios del Long COVID en Colombia. Entreviste a personas que lo padecen, investigadors y medicos.</p>
+                        <a href="https://thesicktimes.org/2025/12/16/despite-long-covids-ongoing-impact-research-in-colombia-is-limited/" target="_blank" class="article-link-btn">Read Article</a>
+                    </div>
                 </div>
 
             </div>
@@ -698,57 +804,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="social">
-        <div class="container">
-            <h2>Redes Sociales y Proyectos Independientes</h2>
-        
-            <div class="video-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 40px auto;">
-                
-                <!-- Perfil de Instagram -->
-                <div class="video-item">
-                    <!-- <div class="video-wrapper" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); display: flex; align-items: center; justify-content: center; padding: 40px;">
-                        <div style="text-align: center; color: white;">
-                            <svg style="width: 80px; height: 80px; margin-bottom: 20px;" fill="white" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                            <h3 style="margin: 0; font-size: 1.5em;">@DelfisJournal</h3>
-                            <p style="margin: 15px 0; opacity: 0.9; font-size: 1.1em;">2,300+ Seguidores</p>
-                            <a href="https://www.instagram.com/delfinamarchese2?igsh=azFnbzY1ZjhudGQz&utm_source=qr" target="_blank" style="display: inline-block; background: white; color: #e4405f; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-top: 10px;">Ver Perfil</a>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Instagram de Periodismo Musical</h3>
-                        <p class="meta">Creadora de Contenido | Proyecto Independiente</p>
-                        <p>Cuenta independiente con entrevistas a artistas, cobertura cultural y análisis musical. Contenido original en español e inglés alcanzando más de 2,300 seguidores.</p>
-                        <div class="skills">
-                            <span class="skill-tag">Redes Sociales</span>
-                            <span class="skill-tag">Creación de Contenido</span>
-                            <span class="skill-tag">Periodismo Cultural</span>
-                        </div>
-                    </div>
-                </div> -->
-        
-                <!-- Video de Jazz Gitano -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/R0IDRrH4GMc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>Perfil de Artista de Jazz Gitano</h3>
-                        <p class="meta">Reportera, Productora, Editora | Proyecto Independiente</p>
-                        <p>Realicé entrevista de campo con músico de jazz gitano, explorando las raíces culturales del género. Parte de cuenta independiente de periodismo musical en Instagram.</p>
-                        <div class="skills">
-                            <span class="skill-tag">Entrevistas de Campo</span>
-                            <span class="skill-tag">Edición de Video Social</span>
-                            <span class="skill-tag">Engagement de Audiencia</span>
-                        </div>
-                    </div>
-                </div>
-        
             </div>
         </div>
     </section>

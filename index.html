@@ -174,7 +174,7 @@
         /* Navigation */
         nav {
             background: white;
-            padding: 15px 0;
+            padding: 15px 5px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -202,7 +202,7 @@
 
         /* Sections */
         section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             background: white;
             margin: 20px 0;
         }
@@ -238,6 +238,7 @@
     color: white;
     margin: 0;
     
+    
 }
 
 #about h2 {
@@ -253,6 +254,10 @@
     margin: 0 auto;
     font-size: 1.1em;
     line-height: 1.8;
+    justify-content: center;
+    word-wrap: break-word;       
+    overflow-wrap: break-word; 
+    
 }
 
 /* Make sure contact links in About section are visible */
@@ -477,13 +482,14 @@
             background: #1a1a2e;
             color: white;
             text-align: center;
-            padding: 0px 20px;
+            padding: 0px 20px 10px 20px;
             margin-top: 0px;
         }
 
-        footer .contact-links {
+        /* footer .contact-links {
             justify-content: center;
-        }
+        } */
+      
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -520,6 +526,9 @@
             .video-grid,
             .written-work {
                 grid-template-columns: 1fr;
+            }
+            .p {
+                justify-content: center;
             }
         }
     </style>
@@ -855,9 +864,9 @@
                             </div>
                         </div>
                 </div>
-                <p>I'm a bilingual multimedia business and economic journalist . Whether I'm building data visualizations, reporting on the economy or producing or editing news packages under deadline, I focus on translating complex topics into clear and accessible information.
-                 <p> I'm fluent in Spanish and English, and I bring strong skills in web development (HTML/CSS/JavaScript/Scrollytelling/Svelte), data visualization (Datawrapper, Flourish) and video editing (Adobe Premiere Pro, CapCut) . I thrive under pressure, collaborate well with teams, and am always looking for the story that matters.</p>
-                <p><strong>Core Competencies:</strong> Data Visualizations | Web Development | Multi-platform news production | Video editing |  AP Style writing | Breaking news coverage | Bilingual Storytelling | Deadline management </p>
+                <p>I'm a bilingual multimedia business and economic journalist . Whether I'm building data visualizations, reporting on the economy or producing or editing news packages under deadline, I focus on translating complex topics into clear and accessible information.</p>
+                <br><p> I'm fluent in Spanish and English, and I bring strong skills in web development (HTML/ CSS/ JavaScript/ Scrollytelling/ Svelte), data visualization (Datawrapper, Flourish) and video editing (Adobe Premiere Pro, CapCut) . I thrive under pressure, collaborate well with teams, and am always looking for the story that matters.</p>
+               <br><p><strong>Core Competencies:</strong> Data Visualizations | Web Development | Multi-platform news production | Video editing |  AP Style writing | Breaking news coverage | Bilingual Storytelling | Deadline management </p>
             </div>
         </div>
     </section>
@@ -867,10 +876,7 @@
         <div class="container">
             <p>&copy; 2025 Delfina Marchese. All rights reserved.</p>
             <p style="margin-top: 10px; opacity: 0.8;">Bilingual Multimedia Journalist | Spanish/English</p>
-            <div class="contact-links" style="margin-top: 20px;">
-                <a href="mailto:delfimarchese@gmail.com">Email</a>
-                <button id="phoneBtn2">Phone</button>
-            </div>
+           
         </div>
     </footer>
 

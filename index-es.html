@@ -67,7 +67,18 @@
             margin-bottom: 10px;
             opacity: 0.9;
         }
-
+        .language-switcher a{
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            text-align: center;
+        }
         .contact-links {
             display: flex;
             justify-content: flex-start;
@@ -221,12 +232,41 @@
         }
 
         /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
+      /* About Section - Add this to your CSS */
+#about {
+    background: linear-gradient(135deg, #1a1a2e 0%, #1a1a2e 100%) !important;
+    color: white;
+    margin: 0;
+    
+}
+
+#about h2 {
+    color: white;
+}
+
+#about h2:after {
+    background: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Make sure contact links in About section are visible */
+#about .contact-links a, 
+#about .contact-links button {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+#about .contact-links a:hover, 
+#about .contact-links button:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+}
 
         /* Video Grid */
         .video-grid {
@@ -424,7 +464,7 @@
             text-decoration: none;
             font-weight: 500;
             margin: 5px 10px 5px 0;
-            transition: background 0.3s ease;
+            /* transition: background: 0.3s ease; */
         }
 
         .article-link-btn:hover {
@@ -437,8 +477,8 @@
             background: #1a1a2e;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
+            padding: 0px 20px;
+            margin-top: 0px;
         }
 
         footer .contact-links {
@@ -492,28 +532,16 @@
                     <h1>Delfina Marchese</h1>
                     <p>Periodista Multimedia Bilingüe | Español/Inglés</p>
                     <p style="font-size: 1em; opacity: 0.8;">M.A. en Periodismo, Cobertura de Negocios y Economía</p>
-                    <div class="contact-links">
-                        <a href="mailto:delfimarchese@gmail.com">Email</a>
-                        <button id="phoneBtn">Teléfono</button>
-                        <a href="https://www.linkedin.com/in/delfina-marchese/?locale=es_ES" target="_blank">LinkedIn</a>
-                        <a href="DelfinaMarchese_Resume_2025.pdf" target="_blank">CV (PDF)</a>
-                        <a href="index.html" style="background: rgba(255,255,255,0.2); font-weight: 600;">🇺🇸 English</a>
+                    <div class="language-switcher" style="margin-top: 15px;center;">
+                         
+                    <a href="index.html" style="background: rgba(255,255,255,0.2); font-weight: 600;">🇺🇸 English</a>
                     </div>
-                </div>
-                <img src="Marchese_Delfina.jpg" alt="Delfina Marchese" class="profile-image">
+                </div>  
             </div>
         </div>
     </header>
 
-    <!-- Phone Modal -->
-    <div id="phoneModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Contáctame</h3>
-            <div class="phone-number">+1 (646) 522-3532</div>
-            <p>¡No dudes en llamar o enviar mensaje!</p>
-        </div>
-    </div>
+   
 
     <nav>
         <ul>
@@ -544,23 +572,7 @@
                         <span class="tech-tag">Public Health Reporting</span>
                     </div>
                 </div>
-    
-                <!-- Card 2 - FIXED -->
-                <div class="data-viz-card">
-                    <div class="project-preview">
-                        <img src="NYCMAP.gif" alt="Map of NYC Crimes">
-                    </div>
-                    <h3>Mapa de Datos de Casos de Violación en NYC</h3>
-                    <p>Creé y produje un mapa basado en datos que visualiza el aumento de casos de violación en NYC en 2024, combinando análisis de datos con narrativa visual impactante para destacar tendencias de seguridad pública.</p>
-                    <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn">NYC 2024 →</a>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Visualización de Datos</span>
-                        <span class="tech-tag">Mapeo</span>
-                        <span class="tech-tag">Reportaje de Seguridad Pública</span>
-                    </div>
-                </div>
-    
-                <!-- Card 3 - FIXED -->
+           
                 <div class="data-viz-card">
                     <div class="project-preview">
                         <img src="Glutenfreemap.gif" alt="Gluten-Free Restaurants in NYC Map">
@@ -572,6 +584,19 @@
                         <span class="tech-tag">Mapeo Interactivo</span>
                         <span class="tech-tag">Desarrollo Web</span>
                         <span class="tech-tag">Experiencia de Usuario</span>
+                    </div>
+                </div>
+                <div class="data-viz-card">
+                    <div class="project-preview">
+                        <img src="NYCMAP.gif" alt="Map of NYC Crimes">
+                    </div>
+                    <h3>Mapa de Datos de Casos de Violación en NYC</h3>
+                    <p>Creé y produje un mapa basado en datos que visualiza el aumento de casos de violación en NYC en 2024, combinando análisis de datos con narrativa visual impactante para destacar tendencias de seguridad pública.</p>
+                    <a href="https://dmarchese76.github.io/2024crimes/" target="_blank" class="article-link-btn">NYC 2024 →</a>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Visualización de Datos</span>
+                        <span class="tech-tag">Mapeo</span>
+                        <span class="tech-tag">Reportaje de Seguridad Pública</span>
                     </div>
                 </div>
                 
@@ -669,7 +694,7 @@
                         <div class="publication">The Sick Times</div>
                         <h3>Atención de Covid Prolongado en Argentina</h3>
                         <p>Reporté sobre cómo los argentinos que sufren de Covid Prolongado navegan la búsqueda de tratamiento en un país donde casi no hay clínicas que traten la enfermedad.</p>
-                        <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Leer Artículo →</a>
+                        <a href="https://thesicktimes.org/2025/08/22/the-crisis-is-expasperating-long-covid-compounds-economic-hardship-in-argentina/" target="_blank" class="article-link-btn">Leer Artículo</a>
                     </div>
                 </div>
                 <div class="article-card">
@@ -679,7 +704,7 @@
                         <div class="publication">The Sick Times</div>
                         <h3>A Pesar del Impacto de Long COVID en Colombia, las investigaciones siguen siendo limitadas. </h3>
                         <p>Reporte sobre la escasez de estudios y el tratamiento de los medios del Long COVID en Colombia. Entreviste a personas que lo padecen, investigadors y medicos.</p>
-                        <a href="https://thesicktimes.org/2025/12/16/despite-long-covids-ongoing-impact-research-in-colombia-is-limited/" target="_blank" class="article-link-btn">Read Article</a>
+                        <a href="https://thesicktimes.org/2025/12/16/despite-long-covids-ongoing-impact-research-in-colombia-is-limited/" target="_blank" class="article-link-btn">Leer Artículo</a>
                     </div>
                 </div>
 
@@ -807,18 +832,34 @@
             </div>
         </div>
     </section>
-   
     <section id="about">
         <div class="container">
             <h2>Sobre Mí</h2>
             <div class="about-content">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <img src="Marchese_Delfina.jpg" alt="Delfina Marchese" class="profile-image" style="margin: 0 auto 20px;">
+                        <div class="contact-links" style="justify-content: center; margin-top: 20px;">
+                            <a href="mailto:delfimarchese@gmail.com">Email</a>
+                            <button id="phoneBtn">Telefono</button>
+                            <a href="https://www.linkedin.com/in/delfina-marchese/?locale=en_US" target="_blank">LinkedIn</a>
+                            <a href="DelfinaMarchese_Resume_2025.pdf" target="_blank">CV(PDF)</a>
+                        </div>
+                     <!-- Phone Modal -->
+                        <div id="phoneModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h3>Contáctame</h3>
+                                <div class="phone-number">+1 (646) 522-3532</div>
+                                <p>¡No dudes en llamar o enviar mensaje!</p>
+                            </div>
+                        </div>
+                </div>
                 <p>Soy un periodista multimedia bilingüe especializado en cobertura de negocios y economía a través de múltiples plataformas. Cuento historias mediante visualizaciones de data, articulos de economia y negocios, o produciendo y editando paquetes de noticias, siempre buscando traducir temas complejos en una informacion simple y accesible.
-               <p> Como periodista Bilingüe, con experiencia en edición de video, desarrollo web y visualización de datos. Me desenvuelvo bien bajo presión y busco oportunidades bilingües que sirvan a audiencias diversas.</p>
-                <p><strong>Competencias Principales:</strong> Producción de noticias multiplataforma, edición de video, reportaje de campo, redacción con estilo AP, cobertura de noticias de última momento, narrativa bilingüe, gestión de plazos, visualización de datos, desarrollo web</p>
+                <p> Como periodista Bilingüe, con experiencia en edición de video, desarrollo web y visualización de datos. Me desenvuelvo bien bajo presión y busco oportunidades bilingües que sirvan a audiencias diversas.</p>
+                <p><strong>Competencias Principales:</strong> Producción de noticias multiplataforma, edición de video, reportaje de campo, redacción con estilo AP, cobertura de noticias de última momento, narrativa bilingüe, gestión de plazos, visualización de datos, desarrollo web </p>
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2025 Delfina Marchese. Todos los derechos reservados.</p>

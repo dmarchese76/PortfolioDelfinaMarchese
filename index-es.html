@@ -868,36 +868,35 @@
     </footer>
 
     <script>
-        // Phone modal functionality
-        const modal = document.getElementById('phoneModal');
-        const phoneBtn = document.getElementById('phoneBtn');
-        const phoneBtn2 = document.getElementById('phoneBtn2');
-        const closeBtn = document.getElementsByClassName('close')[0];
+           const modal = document.getElementById('phoneModal');
+            const phoneBtn = document.getElementById('phoneBtn');
+            const closeBtn = document.getElementsByClassName('close')[0];
 
-        function openModal() {
-            modal.style.display = 'block';
-        }
-
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-
-        phoneBtn.onclick = openModal;
-        phoneBtn2.onclick = openModal;
-        closeBtn.onclick = closeModal;
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
+            function openModal() {
+                modal.style.display = 'block';
             }
-        }
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
+            function closeModal() {
+                modal.style.display = 'none';
             }
-        });
+
+            phoneBtn.onclick = openModal;
+            closeBtn.onclick = closeModal;
+
+          
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                }
+            });
     </script>
 </body>
 </html>
